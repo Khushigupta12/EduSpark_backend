@@ -13,7 +13,10 @@ app.use(
     origin: "*",
   })
 );
-
+app.get("/", (req,res) => {
+  res.setHeaders("Access-Control-Allow-Credentials","true");
+  res.send("API is running...");
+});
 app.use("/api/v1", userdata);
 app.use("/api/v1/login", userdata);
 
