@@ -14,7 +14,6 @@ app.use(
   })
 );
 app.get("/", (req,res) => {
-  res.setHeaders("Access-Control-Allow-Credentials","true");
   res.send("API is running...");
 });
 app.use("/api/v1", userdata);
